@@ -16,3 +16,24 @@ body {
   /* a trick for responsive with just a few lines */
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
+
+input[type="email"], input[type="password"], input[type="text"] {
+  @apply block w-full my-2 rounded-xl border p-2 border-gray-300 bg-gray-50;
+}
+
+input[type="email"]:disabled, input[type="password"]:disabled, input[type="text"]:disabled {
+  @apply bg-gray-300 cursor-not-allowed;
+}
+
+button {
+  @apply border border-gray-300 rounded-xl px-6 py-2;
+  @apply block w-full font-semibold;
+}
+
+button[type="submit"], .submit {
+  @apply bg-primary text-white;
+}
+
+button[type="submit"]:disabled, .submit:disabled {
+  @apply bg-orange-700 cursor-not-allowed;
+}
